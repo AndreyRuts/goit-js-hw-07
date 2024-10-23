@@ -28,6 +28,14 @@ const images = [
 const gallery = document.querySelector(".gallery")
 
 
+const elements = images.map(image => {
+  const imgEl = document.createElement("img");
+  imgEl.classList.add("task2-adjust")
+  imgEl.src = image.url;
+  imgEl.alt = image.alt;
+  return imgEl  
+})
 
+gallery.append(...elements);
 
-console.log(gallery);
+console.log(elements);
