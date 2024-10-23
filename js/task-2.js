@@ -27,15 +27,23 @@ const images = [
 
 const gallery = document.querySelector(".gallery")
 
+// 1st attempt(работает но коряво)
+// const elements = images.map(image => {
+//   const imgEl = document.createElement("img");
+//   imgEl.classList.add("task2-adjust")
+//   imgEl.src = image.url;
+//   imgEl.alt = image.alt;
+//   return imgEl
+// });
 
-const elements = images.map(image => {
-  const imgEl = document.createElement("img");
-  imgEl.classList.add("task2-adjust")
-  imgEl.src = image.url;
-  imgEl.alt = image.alt;
-  return imgEl  
+// gallery.append(...elements);
+
+// console.log(elements);
+
+
+const elements = images.map(({ url, alt }) => {
+  return `<li class="gallery-item"><img src="${url}" alt="${alt}" class="gallery-item-img"></li>`
 })
+  .join(``);
+gallery.insertAdjacentHTML("beforeend", elements);
 
-gallery.append(...elements);
-
-console.log(elements);

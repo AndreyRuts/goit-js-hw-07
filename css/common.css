@@ -14,12 +14,22 @@ body {
 }
 
 /* -------------task-2------------- */
-.task2-adjust {
-  padding: 0;
+.gallery {
   margin: 0 auto;
-  max-width: 300px;
-  max-height: 300px;
+  list-style-type: none;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
+  max-width: 1000px;
+}
+.gallery-item {
+  border: #212121 solid;
+  box-shadow: 1px 1px 6px 1px;
+}
+.gallery-item-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
 }
