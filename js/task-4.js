@@ -10,7 +10,11 @@ function handleSubmit(event) {
         password: elements.password.value
     }
     
-    event.target.reset();
-    console.log(userData);
+    if (elements.email.value === "" || elements.password.value === "" ) {
+        alert("All form fields must be filled in")
+    } else {
+        event.target.reset();
+        console.log(userData);
+    }
 }
 
