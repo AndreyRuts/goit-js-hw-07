@@ -32,12 +32,15 @@ function cleaner() {
 
 function createBoxes(amount) {
   cleaner(); 
+  const test = []; //fix
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
     box.style.width = `${sizes}px`;
     box.style.height = `${sizes}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxes.append(box);
     sizes += 10;
+    test.push(box) //fix
   }
+  boxes.append(...test); //fix
+  
 }
